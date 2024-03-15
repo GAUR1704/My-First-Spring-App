@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="emp" class="com.prowings.myapp.Employee">
+	
+	<constructor-arg index="0" type="int" value="1" />
+  	<constructor-arg index="1" type="java.lang.String" value="Gaurav" />
+  	<constructor-arg index="2" type="java.lang.String" value="Bhandara" />
+
+	<!--	<property name="id" value="1" />
+		<property name="name" value="Gaurav" />
+		<property name="address" value="Bhandara" />
+		
+		-->
+
+	</bean>
+
+
+	<bean id="add1" class="com.prowings.myapp.Address">
+
+		<property name="pin" value="123" />
+		<property name="city" value="Nagpur" />
+		<property name="country" value="India" />
+
+	</bean>
+
+
+	<bean id="std" class="com.prowings.myapp.Student">
+
+		<property name="id" value="10" />
+		<property name="name" value="Gaurav" />
+		<property name="address" ref="add1">
+
+		</property>
+
+	</bean>
+
+	<bean id="car" class="com.prowings.myapp_usingCollection.Car">
+
+		<property name="id" value="1" />
+		<property name="company" value="Range Rover" />
+
+		<property name="features">
+			<list>
+				<value>Power Windows</value>
+				<value>Backup Camera</value>
+				<value>Navigation System</value>
+			</list>
+		</property>
+
+		<property name="components">
+			<set>
+				<value>Engine</value>
+				<value>Steering System</value>
+				<value>Steering System</value>
+				<value>Fuel Tank</value>
+				<value>Fuel Tank</value>
+				<value>Battery</value>
+				<value>Battery</value>
+			</set>
+
+		</property>
+
+		<property name="parts">
+			<map>
+				<entry key="1" value="Shock Absorbers" />
+				<entry key="2" value="Alternator" />
+				<entry key="3" value="Power Steering Pump" />
+			</map>
+		</property>
+
+		<property name="carProp">
+
+			<props>
+				<prop key="Fuel Efficiency">aaa</prop>
+				<prop key="Horsepower">bbb</prop>
+				<prop key="Torque">ccc</prop>
+			</props>
+
+		</property>
+
+	</bean>
+
+
+</beans>

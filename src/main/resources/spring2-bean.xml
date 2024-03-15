@@ -1,0 +1,54 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bank" class="com.prowings.myBankApp.SBIBank">
+		<property name="branchCode" value="123456" />
+		<property name="empName">
+			<list>
+				<value>Gaurav</value>
+				<value>Rahul</value>
+				<value>Vaibhav</value>
+				<value>Prince</value>
+			</list>
+		</property>
+
+		<property name="accountType">
+
+			<set>
+				<value>Saving_Account</value>
+				<value>Salary_Account</value>
+				<value>Business_Account</value>
+				<value>Joint_Account</value>
+
+			</set>
+
+		</property>
+		
+		<property name="empDesignation">
+		
+		<map>
+		<entry key = "Grade1" value = "Manager"/>
+		<entry key = "Grade2" value = "Probationary Officer"/>
+		<entry key = "Grade3" value = "Clerk"/>
+		</map>
+		
+		</property>
+		
+		<property name="loanType">
+		<props>
+		<prop key="Personal_Loan">1</prop>
+		<prop key="Student_Loan">2</prop>
+		<prop key="Gold_Loan">3</prop>
+		<prop key="Business_Loan">4</prop>
+		</props>
+		
+		</property>
+
+
+
+	</bean>
+
+
+</beans>
