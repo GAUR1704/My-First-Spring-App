@@ -12,6 +12,7 @@ public class TestEmployeeContainer {
 		Employee emp1 = context.getBean(Employee.class, "emp");
 		
 		System.out.println(emp1);
+		
 	}
 
 }

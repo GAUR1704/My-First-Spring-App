@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="per" name="person"
+		class="com.prowings.Autowiring.Person" autowire="constructor">
+		<property name="id" value="10"></property>
+		<property name="name" value="Gaurav"></property>
+		<!-- <property name="address" ref="add1" ></property>
+ -->
+	</bean>
+	
+	<bean id = "add1" name = "address123" class = "com.prowings.Autowiring.Address" >
+	<property name="pin" value = "1234"></property>
+	<property name="city" value = "Pune"></property>
+	<property name="country" value = "India"></property>
+	</bean>
+	
+	<bean id = "add2" name = "address45" class = "com.prowings.Autowiring.Address" >
+	<property name="pin" value = "5678"></property>
+	<property name="city" value = "Mumbai"></property>
+	<property name="country" value = "India"></property>
+	</bean>
+
+</beans>

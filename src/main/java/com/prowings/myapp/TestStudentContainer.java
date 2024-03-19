@@ -12,6 +12,8 @@ public class TestStudentContainer {
 		Student student = context.getBean(Student.class , "std");
 		
 		System.out.println(student);
+		
+		
 	}
 
 }
